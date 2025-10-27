@@ -13,8 +13,8 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-20 h-20 rounded-lg flex items-center justify-center">
-                <Image src={"/logo.png"} alt="Proyojon.bd" width={700} height={700} />
+              <div className="w-15 h-15 rounded-lg flex items-center justify-center">
+                <Image src={"/logo.png"} alt="Proyojon.bd" width={500} height={500} />
               </div>
               <span className="font-bold text-lg">Proyojon.bd</span>
             </div>

@@ -29,11 +29,11 @@ export default function Navbar({ isScrolled }) {
           {/* Logo */}
           <Link href="#" className="flex items-center gap-2">
             <motion.div
-              className="w-20 h-20 rounded-lg flex items-center justify-center"
+              className="w-15 h-15 rounded-lg flex items-center justify-center"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Image src={"/logo.png"} alt="Proyojon.bd" width={700} height={700} />
+              <Image src={"/logo.png"} alt="Proyojon.bd" width={500} height={500} />
             </motion.div>
             <span className="font-bold text-xl text-foreground hidden sm:inline">Proyojon.bd</span>
           </Link>
