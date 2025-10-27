@@ -29,7 +29,7 @@ export default function Navbar({ isScrolled }) {
           {/* Logo */}
           <Link href="#" className="flex items-center gap-2">
             <motion.div
-              className="w-15 h-15 rounded-lg flex items-center justify-center"
+              className="w-10 h-10 md:w-15 md:h-15 rounded-lg flex items-center justify-center"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
