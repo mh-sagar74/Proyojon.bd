@@ -54,14 +54,14 @@ export default function Contact() {
               {
                 icon: Phone,
                 title: "Phone",
-                content: "+880 1911-668122",
-                href: "tel:+880",
+                content: "+880 1969-231095",
+                href: "tel:+880 1969-231095",
               },
               {
                 icon: Mail,
                 title: "Email",
-                content: "info@proyojon.bd",
-                href: "mailto:info@proyojon.bd",
+                content: "proyojon0804@gmail.com",
+                href: "mailto:proyojon0804@gmail.com",
               },
               {
                 icon: MapPin,

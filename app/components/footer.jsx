@@ -80,13 +80,13 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-sm text-background/70">
               <li>
-                <a href="tel:+880" className="hover:text-background transition-colors">
-                  +880 1911-668122
+                <a href="tel:+880 1969-231095" className="hover:text-background transition-colors">
+                  +880 1969-231095
                 </a>
               </li>
               <li>
-                <a href="mailto:info@proyojon.bd" className="hover:text-background transition-colors">
-                  info@proyojon.bd
+                <a href="proyojon0804@gmail.com" className="hover:text-background transition-colors">
+                  proyojon0804@gmail.com
                 </a>
               </li>
               <li>Khulna, Bangladesh</li>
