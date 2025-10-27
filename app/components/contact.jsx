@@ -43,7 +43,7 @@ export default function Contact() {
         >
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Get Your Free Quote</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Contact us today and let's discuss your moving needs
+            Contact us today and let&apos;s discuss your moving needs
           </p>
         </motion.div>
 
@@ -173,7 +173,7 @@ export default function Contact() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                 >
-                  Thank you! We'll contact you soon.
+                  Thank you! We&apos;ll contact you soon.
                 </motion.div>
               )}
             </motion.form>
