@@ -1,16 +1,10 @@
 
 "use client"
 
-import { useEffect, useState } from "react"
 import { ArrowRight } from "lucide-react"
 import { motion } from "framer-motion"
 
 export default function Hero() {
-  const [isVisible, setIsVisible] = useState(false)
-
-  useEffect(() => {
-    setIsVisible(true)
-  }, [])
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
@@ -63,7 +57,7 @@ export default function Hero() {
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
           <motion.div
@@ -78,7 +72,7 @@ export default function Hero() {
           <motion.h1
             className="text-5xl md:text-7xl font-bold text-foreground mb-6 leading-tight"
             initial={{ opacity: 0, y: 20 }}
-            animate={isVisible ? { opacity: 1, y: 0 } : {}}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
             Your Trusted Moving Partner in{" "}
@@ -88,7 +82,7 @@ export default function Hero() {
           <motion.p
             className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
-            animate={isVisible ? { opacity: 1, y: 0 } : {}}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
             Professional office and home shifting services with experienced team, modern equipment, and commitment to
@@ -98,7 +92,7 @@ export default function Hero() {
           <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center"
             initial={{ opacity: 0, y: 20 }}
-            animate={isVisible ? { opacity: 1, y: 0 } : {}}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
             <motion.a
@@ -127,7 +121,7 @@ export default function Hero() {
         <motion.div
           className="grid grid-cols-3 gap-4 mt-16"
           initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.8 }}
         >
           {[
@@ -139,7 +133,7 @@ export default function Hero() {
               key={index}
               className="p-4 bg-card/50 backdrop-blur-sm rounded-lg border border-border/50 hover:border-primary/50 transition-all duration-300"
               initial={{ opacity: 0, scale: 0.8 }}
-              animate={isVisible ? { opacity: 1, scale: 1 } : {}}
+              animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.7 + index * 0.1 }}
               whileHover={{ y: -5 }}
             >
