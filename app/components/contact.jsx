@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { Mail, Phone, MapPin, Send } from "lucide-react"
 import { motion } from "framer-motion"
+import emailjs from "@emailjs/browser"
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -13,6 +14,8 @@ export default function Contact() {
   })
 
   const [submitted, setSubmitted] = useState(false)
+  const [isError, setIsError] = useState(false)
+
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -24,10 +27,28 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log("Form submitted:", formData)
-    setSubmitted(true)
-    setFormData({ name: "", email: "", phone: "", message: "" })
-    setTimeout(() => setSubmitted(false), 3000)
+
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      to_name: "Proyojon BD",
+      message: formData.message,
+      phone: formData.phone,
+    }
+
+    emailjs.send(process.env.NEXT_PUBLIC_SERVICE_ID ?? "",
+      process.env.NEXT_PUBLIC_TEMPLATE_ID ?? "",
+      templateParams,
+      process.env.NEXT_PUBLIC_PUBLIC_KEY).then(()=>{
+        setSubmitted(true);
+        setFormData({ name: "", email: "", phone: "", message: "" });
+        setTimeout(() => setSubmitted(false), 3000);
+      }).catch((err)=>{if(err){
+        setIsError(true);
+        setTimeout(() => setIsError(false), 3000);
+      }else{
+        setIsError(false);
+      }})
   }
 
   return (
@@ -177,6 +198,17 @@ export default function Contact() {
                 </motion.div>
               )}
             </motion.form>
+
+            {isError && (
+              <motion.div
+                  className="p-4 bg-red-500/20 border border-red-500/50 rounded-lg text-red-700 text-center"
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                >
+                  Something went wrong! Please try again.
+                </motion.div>
+            )}
           </div>
         </div>
       </div>
